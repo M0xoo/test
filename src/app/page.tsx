@@ -28,15 +28,15 @@ export default function Home() {
             <div className="mx-auto max-w-3xl text-center">
               <div className="mb-5 inline-flex items-center gap-2 rounded-[4px] border border-[#333] bg-[#141414] px-2.5 py-1 text-[12px] text-[#8c8c8c]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#5e6ad2]" />
-                Now in beta
+                Now in beta - autonomous coding
               </div>
               <h1 className="mb-5 text-[40px] font-medium leading-[1.15] tracking-tight text-white md:text-[56px]">
                 The kanban board for{' '}
-                <span className="text-[#8c8c8c]">AI agents</span>
+                <span className="text-[#8c8c8c]">autonomous coding agents</span>
               </h1>
               <p className="mb-10 text-[15px] leading-[1.5] text-[#8c8c8c] md:text-[17px]">
-                Orchestrate your code review and testing workflows with intelligent agents.{' '}
-                OpenBoard brings AI-powered automation to your development pipeline.
+                Visualize and orchestrate AI agents that code, review, and test your PRs.{' '}
+                OpenBoard brings human-in-the-loop automation to your development workflow.
               </p>
               <div className="flex flex-col items-center justify-center gap-4">
                 <p className="text-[13px] text-[#8c8c8c]">Requires git, gh cli, and opencode already installed</p>
@@ -118,8 +118,8 @@ export default function Home() {
         <section id="features" className="py-16">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 text-center">
-              <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">Built for AI-powered workflows</h2>
-              <p className="text-[14px] text-[#8c8c8c]">Everything you need to manage agents that code review and test</p>
+              <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">Built for autonomous coding agents</h2>
+              <p className="text-[14px] text-[#8c8c8c]">Tools to manage agents that write code, review PRs, and run tests</p>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               {[
@@ -130,7 +130,7 @@ export default function Home() {
                     </svg>
                   ),
                   title: "Agent Orchestration",
-                  description: "Assign tasks to specialized AI agents for code review, testing, and deployment.",
+                  description: "Assign tasks to coding agents that write code, review PRs, and run tests automatically.",
                 },
                 {
                   icon: (
@@ -167,13 +167,13 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-12 text-center">
               <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">How it works</h2>
-              <p className="text-[14px] text-[#8c8c8c]">Three simple steps to automate your workflow</p>
+              <p className="text-[14px] text-[#8c8c8c]">Three steps to autonomous code review and testing</p>
             </div>
             <div className="grid gap-6 md:grid-cols-3">
               {[
-                { step: "01", title: "Connect your repo", description: "Link your GitHub or GitLab repository in seconds." },
-                { step: "02", title: "Configure agents", description: "Set up agents for review, testing, and deployment tasks." },
-                { step: "03", title: "Watch them work", description: "Agents pick up tasks automatically and report back in real-time." },
+                { step: "01", title: "Run openboard", description: "Start the CLI in any project directory." },
+                { step: "02", title: "Agents spawn", description: "Coding agents appear on your kanban board ready to work." },
+                { step: "03", title: "Review & approve", description: "Watch agents code, test, and review. Approve their changes." },
               ].map((item, i) => (
                 <div key={i} className="relative">
                   <div className="mb-3 text-[32px] font-medium text-[#333]">{item.step}</div>

@@ -327,14 +327,6 @@ export default function Home() {
 
         <footer className="border-t border-[#262626] py-8">
           <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 md:flex-row">
-            <div className="flex items-center gap-2">
-              <div className="flex h-5 w-5 items-center justify-center rounded bg-[#5e6ad2]">
-                <svg className="h-2.5 w-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7" />
-                </svg>
-              </div>
-              <span className="text-[13px] font-medium text-white">OpenBoard</span>
-            </div>
             <p className="text-[12px] text-[#666]">&copy; 2026 OpenBoard. All rights reserved.</p>
           </div>
         </footer>

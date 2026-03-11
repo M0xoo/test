@@ -1,4 +1,8 @@
+"use client";
+import { useState } from "react";
+
 export default function Home() {
+  const [showContactModal, setShowContactModal] = useState(false);
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-[#e5e5e5]">
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#262626] bg-[#0d0d0d]">
@@ -14,6 +18,7 @@ export default function Home() {
           <div className="flex items-center gap-6">
             <a href="#features" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Features</a>
             <a href="#how-it-works" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">How it works</a>
+            <button onClick={() => setShowContactModal(true)} className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Enterprise</button>
             <button className="rounded-[4px] bg-[#5e6ad2] px-3.5 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
               Get Started
             </button>
@@ -37,13 +42,19 @@ export default function Home() {
                 Orchestrate your code review and testing workflows with intelligent agents.{' '}
                 OpenBoard brings AI-powered automation to your development pipeline.
               </p>
-              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <button className="rounded-[4px] bg-[#5e6ad2] px-6 py-2.5 text-[14px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
-                  Start for free
-                </button>
-                <button className="rounded-[4px] border border-[#333] px-6 py-2.5 text-[14px] font-medium text-[#8c8c8c] transition-colors hover:border-[#555] hover:text-white">
-                  View Demo
-                </button>
+              <div className="flex flex-col items-center justify-center gap-4">
+                <p className="text-[13px] text-[#8c8c8c]">Requires git, gh cli, and opencode already installed</p>
+                <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
+                    npm i -g @m0xoo/openboard
+                  </div>
+                  <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
+                    cd /path/to/project
+                  </div>
+                  <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
+                    openboard
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -182,13 +193,32 @@ export default function Home() {
           <div className="mx-auto max-w-4xl px-6 text-center">
             <div className="rounded-[6px] border border-[#262626] bg-[#141414] p-10 md:p-14">
               <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">Ready to automate?</h2>
-              <p className="mb-8 text-[14px] text-[#8c8c8c]">Join thousands of teams using OpenBoard to streamline their development workflow.</p>
-              <button className="rounded-[4px] bg-[#5e6ad2] px-6 py-2.5 text-[14px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
-                Start for free
+              <p className="mb-8 text-[14px] text-[#8c8c8c]">Run OpenBoard in your project directory to get started.</p>
+              <button onClick={() => setShowContactModal(true)} className="rounded-[4px] border border-[#333] px-6 py-2.5 text-[14px] font-medium text-[#8c8c8c] transition-colors hover:border-[#555] hover:text-white">
+                Contact Sales
               </button>
             </div>
           </div>
         </section>
+
+        {showContactModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setShowContactModal(false)}>
+            <div className="mx-4 w-full max-w-md rounded-[6px] border border-[#262626] bg-[#141414] p-6" onClick={(e) => e.stopPropagation()}>
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-[18px] font-medium text-white">Contact Sales</h3>
+                <button onClick={() => setShowContactModal(false)} className="text-[#8c8c8c] hover:text-white">
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <p className="mb-4 text-[14px] text-[#8c8c8c]">Interested in enterprise features? Reach out to learn more about pricing and custom integrations.</p>
+              <a href="mailto:contact@m0xoo.dev" className="block rounded-[4px] bg-[#5e6ad2] px-4 py-2.5 text-center text-[14px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
+                Email Us
+              </a>
+            </div>
+          </div>
+        )}
 
         <footer className="border-t border-[#262626] py-8">
           <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 md:flex-row">

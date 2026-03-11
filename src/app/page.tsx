@@ -61,9 +61,6 @@ export default function Home() {
                     npm i -g @m0xoo/openboard
                   </div>
                   <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
-                    cd /path/to/project
-                  </div>
-                  <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
                     openboard
                   </div>
                 </div>

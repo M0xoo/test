@@ -60,9 +60,6 @@ export default function Home() {
                   <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
                     npm i -g @m0xoo/openboard
                   </div>
-                  <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
-                    openboard
-                  </div>
                 </div>
               </div>
             </div>
@@ -217,16 +214,6 @@ export default function Home() {
               <div className="rounded-[4px] border border-[#262626] bg-[#141414] p-4">
                 <div className="flex items-start gap-4">
                   <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">2</div>
-                  <div>
-                    <h3 className="mb-1 text-[15px] font-medium text-white">Navigate to your project</h3>
-                    <p className="text-[13px] text-[#8c8c8c]">OpenBoard works in any Git repository. Navigate to your project directory:</p>
-                    <p className="mt-1 text-[13px] text-[#e5e5e5]"><code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px]">cd /path/to/your/project</code></p>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-[4px] border border-[#262626] bg-[#141414] p-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">3</div>
                   <div>
                     <h3 className="mb-1 text-[15px] font-medium text-white">Run OpenBoard</h3>
                     <p className="text-[13px] text-[#8c8c8c]">Start the application:</p>

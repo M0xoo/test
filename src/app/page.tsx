@@ -244,8 +244,8 @@ export default function Home() {
         <section className="py-16">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <div className="rounded-[6px] border border-[#262626] bg-[#141414] p-10 md:p-14">
-              <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">Ready to automate?</h2>
-              <p className="mb-8 text-[14px] text-[#8c8c8c]">Run OpenBoard in your project directory to get started.</p>
+              <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">Ready to scale with the cloud?</h2>
+              <p className="mb-8 text-[14px] text-[#8c8c8c]">Explore our cloud solutions to automate your workflows at scale.</p>
               <button onClick={() => setShowContactModal(true)} className="rounded-[4px] border border-[#333] px-6 py-2.5 text-[14px] font-medium text-[#8c8c8c] transition-colors hover:border-[#555] hover:text-white">
                 Contact Sales
               </button>

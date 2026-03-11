@@ -27,7 +27,7 @@ export default function Home() {
             <span className="text-[15px] font-medium text-white">OpenBoard</span>
             <div className="inline-flex items-center gap-2 rounded-[4px] border border-[#333] bg-[#141414] px-2 py-0.5 text-[10px] text-[#8c8c8c]">
               <span className="h-1 w-1 rounded-full bg-[#5e6ad2]" />
-              Now in beta
+              Beta
             </div>
           </div>
           <div className="flex items-center gap-6">

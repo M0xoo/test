@@ -3,6 +3,22 @@ import { useState } from "react";
 
 export default function Home() {
   const [showContactModal, setShowContactModal] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent">("idle");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus("sending");
+    setTimeout(() => {
+      setFormStatus("sent");
+      setTimeout(() => {
+        setShowContactModal(false);
+        setFormStatus("idle");
+        setFormData({ name: "", email: "", message: "" });
+      }, 1500);
+    }, 1000);
+  };
+
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-[#e5e5e5]">
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#262626] bg-[#0d0d0d]">
@@ -248,10 +264,63 @@ export default function Home() {
                   </svg>
                 </button>
               </div>
-              <p className="mb-4 text-[14px] text-[#8c8c8c]">Interested in enterprise features? Reach out to learn more about pricing and custom integrations.</p>
-              <a href="mailto:contact@m0xoo.dev" className="block rounded-[4px] bg-[#5e6ad2] px-4 py-2.5 text-center text-[14px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
-                Email Us
-              </a>
+              {formStatus === "sent" ? (
+                <div className="flex flex-col items-center justify-center py-8">
+                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#1f3a2d]">
+                    <svg className="h-6 w-6 text-[#4ade80]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-[15px] font-medium text-white">Message sent!</p>
+                  <p className="text-[13px] text-[#8c8c8c]">We&apos;ll be in touch soon.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="mb-1.5 block text-[13px] text-[#8c8c8c]">Name</label>
+                    <input
+                      id="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full rounded-[4px] border border-[#333] bg-[#1a1a1a] px-3 py-2.5 text-[14px] text-[#e5e5e5] placeholder-[#666] outline-none transition-colors focus:border-[#5e6ad2]"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="mb-1.5 block text-[13px] text-[#8c8c8c]">Email</label>
+                    <input
+                      id="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full rounded-[4px] border border-[#333] bg-[#1a1a1a] px-3 py-2.5 text-[14px] text-[#e5e5e5] placeholder-[#666] outline-none transition-colors focus:border-[#5e6ad2]"
+                      placeholder="you@company.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="mb-1.5 block text-[13px] text-[#8c8c8c]">Message</label>
+                    <textarea
+                      id="message"
+                      required
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full resize-none rounded-[4px] border border-[#333] bg-[#1a1a1a] px-3 py-2.5 text-[14px] text-[#e5e5e5] placeholder-[#666] outline-none transition-colors focus:border-[#5e6ad2]"
+                      placeholder="Tell us about your needs..."
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={formStatus === "sending"}
+                    className="w-full rounded-[4px] bg-[#5e6ad2] px-4 py-2.5 text-[14px] font-medium text-white transition-colors hover:bg-[#4b56b0] disabled:opacity-60"
+                  >
+                    {formStatus === "sending" ? "Sending..." : "Send Message"}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         )}

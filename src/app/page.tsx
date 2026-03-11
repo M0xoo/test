@@ -12,6 +12,7 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-6">
             <a href="#features" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Features</a>
+            <a href="#instructions" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Instructions</a>
             <a href="#how-it-works" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">How it works</a>
             <button onClick={() => setShowContactModal(true)} className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Enterprise</button>
             <button className="rounded-[4px] bg-[#5e6ad2] px-3.5 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
@@ -180,6 +181,46 @@ export default function Home() {
                   <p className="text-[14px] text-[#8c8c8c]">{item.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="instructions" className="py-16">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="mb-12 text-center">
+              <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">Instructions</h2>
+              <p className="text-[14px] text-[#8c8c8c]">Get started in minutes</p>
+            </div>
+            <div className="mx-auto max-w-2xl space-y-4">
+              <div className="rounded-[4px] border border-[#262626] bg-[#141414] p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">1</div>
+                  <div>
+                    <h3 className="mb-1 text-[15px] font-medium text-white">Install OpenBoard</h3>
+                    <p className="text-[13px] text-[#8c8c8c]">Run <code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px] text-[#e5e5e5]">npm i -g @m0xoo/openboard</code> to install globally</p>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[4px] border border-[#262626] bg-[#141414] p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">2</div>
+                  <div>
+                    <h3 className="mb-1 text-[15px] font-medium text-white">Navigate to your project</h3>
+                    <p className="text-[13px] text-[#8c8c8c]">OpenBoard works in any Git repository. Navigate to your project directory:</p>
+                    <p className="mt-1 text-[13px] text-[#e5e5e5]"><code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px]">cd /path/to/your/project</code></p>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[4px] border border-[#262626] bg-[#141414] p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">3</div>
+                  <div>
+                    <h3 className="mb-1 text-[15px] font-medium text-white">Run OpenBoard</h3>
+                    <p className="text-[13px] text-[#8c8c8c]">Start the application:</p>
+                    <p className="mt-1 text-[13px] text-[#e5e5e5]"><code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px]">openboard</code></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

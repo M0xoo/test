@@ -25,6 +25,10 @@ export default function Home() {
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
           <div className="flex items-center gap-2">
             <span className="text-[15px] font-medium text-white">OpenBoard</span>
+            <div className="inline-flex items-center gap-2 rounded-[4px] border border-[#333] bg-[#141414] px-2 py-0.5 text-[10px] text-[#8c8c8c]">
+              <span className="h-1 w-1 rounded-full bg-[#5e6ad2]" />
+              Beta
+            </div>
           </div>
           <div className="flex items-center gap-6">
             <a href="#features" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Features</a>
@@ -42,10 +46,6 @@ export default function Home() {
         <section className="pt-28 pb-16">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-5 inline-flex items-center gap-2 rounded-[4px] border border-[#333] bg-[#141414] px-2.5 py-1 text-[12px] text-[#8c8c8c]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#5e6ad2]" />
-                Now in beta - autonomous coding
-              </div>
               <h1 className="mb-5 text-[40px] font-medium leading-[1.15] tracking-tight text-white md:text-[56px]">
                 The kanban board for{' '}
                 <span className="text-[#8c8c8c]">autonomous coding agents</span>

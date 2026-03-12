@@ -59,7 +59,7 @@ export default function Home() {
                 <p className="text-[13px] text-[#8c8c8c]">Requires git, gh cli, and opencode already installed</p>
                 <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
-                    npm i -g @m0xoo/openboard
+                    npx @m0xoo/openboard
                   </div>
                 </div>
               </div>
@@ -207,8 +207,8 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">1</div>
                   <div>
-                    <h3 className="mb-1 text-[15px] font-medium text-white">Install OpenBoard</h3>
-                    <p className="text-[13px] text-[#8c8c8c]">Run <code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px] text-[#e5e5e5]">npm i -g @m0xoo/openboard</code> to install globally</p>
+                    <h3 className="mb-1 text-[15px] font-medium text-white">Install prerequisites</h3>
+                    <p className="text-[13px] text-[#8c8c8c]">Install <a href="https://github.com/git-guides/install-git" className="text-[#5e6ad2] hover:underline">git</a>, <a href="https://github.com/cli/cli#installation" className="text-[#5e6ad2] hover:underline">gh cli</a>, and <a href="https://opencode.ai/docs/installation" className="text-[#5e6ad2] hover:underline">opencode</a></p>
                   </div>
                 </div>
               </div>
@@ -216,9 +216,26 @@ export default function Home() {
                 <div className="flex items-start gap-4">
                   <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">2</div>
                   <div>
+                    <h3 className="mb-1 text-[15px] font-medium text-white">Authenticate with GitHub</h3>
+                    <p className="text-[13px] text-[#8c8c8c]">Run <code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px] text-[#e5e5e5]">gh auth login</code></p>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[4px] border border-[#262626] bg-[#141414] p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">3</div>
+                  <div>
+                    <h3 className="mb-1 text-[15px] font-medium text-white">Navigate to your project</h3>
+                    <p className="text-[13px] text-[#8c8c8c]">cd to a folder linked to your repository</p>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[4px] border border-[#262626] bg-[#141414] p-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">4</div>
+                  <div>
                     <h3 className="mb-1 text-[15px] font-medium text-white">Run OpenBoard</h3>
-                    <p className="text-[13px] text-[#8c8c8c]">Start the application:</p>
-                    <p className="mt-1 text-[13px] text-[#e5e5e5]"><code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px]">openboard</code></p>
+                    <p className="text-[13px] text-[#8c8c8c]">Run <code className="rounded bg-[#1f1f1f] px-1.5 py-0.5 text-[12px] text-[#e5e5e5]">npx @m0xoo/openboard</code></p>
                   </div>
                 </div>
               </div>

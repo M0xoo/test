@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [showContactModal, setShowContactModal] = useState(false);
@@ -35,9 +36,9 @@ export default function Home() {
             <a href="#instructions" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Instructions</a>
             <a href="#how-it-works" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">How it works</a>
             <button onClick={() => setShowContactModal(true)} className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Enterprise</button>
-            <button className="rounded-[4px] bg-[#5e6ad2] px-3.5 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
+            <Link href="/getting-started" className="rounded-[4px] bg-[#5e6ad2] px-3.5 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -230,9 +231,9 @@ export default function Home() {
             <div className="rounded-[6px] border border-[#262626] bg-[#141414] p-10 md:p-14">
               <h2 className="mb-3 text-[28px] font-medium text-white md:text-[32px]">Ready to scale with the cloud?</h2>
               <p className="mb-8 text-[14px] text-[#8c8c8c]">Explore our cloud solutions to automate your workflows at scale.</p>
-              <button onClick={() => setShowContactModal(true)} className="rounded-[4px] border border-[#333] px-6 py-2.5 text-[14px] font-medium text-[#8c8c8c] transition-colors hover:border-[#555] hover:text-white">
-                Contact Sales
-              </button>
+              <Link href="/getting-started" className="rounded-[4px] border border-[#333] px-6 py-2.5 text-[14px] font-medium text-[#8c8c8c] transition-colors hover:border-[#555] hover:text-white">
+                Get Started
+              </Link>
             </div>
           </div>
         </section>

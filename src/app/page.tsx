@@ -56,7 +56,7 @@ export default function Home() {
                 OpenBoard brings human-in-the-loop automation to your development workflow.
               </p>
               <div className="flex flex-col items-center justify-center gap-4">
-                <p className="text-[13px] text-[#8c8c8c]">Requires git, gh cli, and opencode already installed</p>
+                <p className="text-[13px] text-[#8c8c8c]">Requires git, Github CLI, and opencode already installed</p>
                 <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <div className="rounded-[4px] border border-[#333] bg-[#141414] px-5 py-3 text-[14px] font-mono text-[#e5e5e5]">
                     npx @m0xoo/openboard
@@ -208,7 +208,7 @@ export default function Home() {
                   <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#5e6ad2] text-[12px] font-medium text-white">1</div>
                   <div>
                     <h3 className="mb-1 text-[15px] font-medium text-white">Install prerequisites</h3>
-                    <p className="text-[13px] text-[#8c8c8c]">Install <a href="https://github.com/git-guides/install-git" className="text-[#5e6ad2] hover:underline">git</a>, <a href="https://github.com/cli/cli#installation" className="text-[#5e6ad2] hover:underline">gh cli</a>, and <a href="https://opencode.ai/docs/installation" className="text-[#5e6ad2] hover:underline">opencode</a></p>
+                    <p className="text-[13px] text-[#8c8c8c]">Install <a href="https://github.com/git-guides/install-git" className="text-[#5e6ad2] hover:underline">git</a>, <a href="https://github.com/cli/cli#installation" className="text-[#5e6ad2] hover:underline">Github CLI</a>, and <a href="https://opencode.ai/docs/installation" className="text-[#5e6ad2] hover:underline">opencode</a></p>
                   </div>
                 </div>
               </div>

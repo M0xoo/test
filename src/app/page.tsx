@@ -330,6 +330,11 @@ export default function Home() {
         <footer className="border-t border-[#262626] py-8">
           <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 md:flex-row">
             <p className="text-[12px] text-[#666]">&copy; 2026 OpenBoard. All rights reserved.</p>
+            <nav className="flex gap-6 text-[12px] text-[#666]">
+              <a href="/team" className="hover:text-[#262626]">Team</a>
+              <a href="/jobs" className="hover:text-[#262626]">Jobs</a>
+              <a href="/careers" className="hover:text-[#262626]">Careers</a>
+            </nav>
           </div>
         </footer>
       </main>

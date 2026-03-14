@@ -32,13 +32,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#features" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Features</a>
-            <a href="#instructions" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Instructions</a>
-            <a href="#how-it-works" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">How it works</a>
-            <button onClick={() => setShowContactModal(true)} className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Enterprise</button>
-            <Link href="/getting-started" className="rounded-[4px] bg-[#5e6ad2] px-3.5 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
-              Get Started
-            </Link>
+            <Link href="/getting-started" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Getting started</Link>
+            <a href="https://github.com/openboardLabs/openboard" target="_blank" rel="noopener noreferrer" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">
+              GitHub
+            </a>
           </div>
         </div>
       </nav>

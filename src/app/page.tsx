@@ -32,13 +32,11 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#features" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Features</a>
-            <a href="#instructions" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Instructions</a>
-            <a href="#how-it-works" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">How it works</a>
-            <button onClick={() => setShowContactModal(true)} className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Enterprise</button>
-            <Link href="/getting-started" className="rounded-[4px] bg-[#5e6ad2] px-3.5 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[#4b56b0]">
-              Get Started
-            </Link>
+            <Link href="/getting-started" className="text-[13px] text-[#8c8c8c] transition-colors hover:text-white">Getting started</Link>
+<a href="https://github.com/openboardLabs/openboard" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[13px] text-[#8c8c8c] transition-colors hover:text-white">
+              <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"></path></svg>
+              <img src="https://img.shields.io/github/stars/openboardLabs/openboard?style=flat&labelColor=141414&color=5e6ad2&cacheSeconds=3600" alt="GitHub stars" />
+            </a>
           </div>
         </div>
       </nav>
